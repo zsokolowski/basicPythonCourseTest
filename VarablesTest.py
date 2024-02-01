@@ -3,7 +3,7 @@ import unittest
 
 
 class MyTestCase(unittest.TestCase):
-    def test_int_be_mutable(self):
+    def test_int_be_immutable(self):
         a = 2
         b = a
         a = 3
@@ -11,7 +11,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(a, int)
         self.assertNotEqual(a, b)
 
-    def test_float_be_mutable(self):
+    def test_float_be_immutable(self):
         a = 2.2
         b = a
         a = 3.1
@@ -19,7 +19,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(a, float)
         self.assertNotEqual(a, b)
 
-    def test_str_be_mutable(self):
+    def test_str_be_immutable(self):
         a = "string"
         b = a
         a = "string2"
