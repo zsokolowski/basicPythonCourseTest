@@ -58,6 +58,12 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(a, dict)
         self.assertNotEqual(a, b)
 
+        c = {"a": 0, "b": 2, "c": 3}
+
+        a["a"] = 0
+
+        self.assertDictEqual(a, c)
+
 
 if __name__ == '__main__':
     unittest.main()
